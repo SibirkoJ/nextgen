@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Mortgage Application Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div id="navBar">
+    
+    <ul>
+         <li><a href="/" >Home</a></li>
+         <li><a href="/reviews">Application Review</a></li>
+    </ul>
+    
+    </div>
+    
+        <div id="backupTable">   
+
+            <div><h2>Previous Applications</h2></div>
+
+            <table>
+                <tr>
+                    <th>ID/Name</th>
+                    <th>Address</th>
+                    <th>Email</th>
+                    <th>Personal Status</th>
+                    <th>Housing</th>
+                    <th>Job</th>
+                    <th>Own Telephone</th>
+                    <th>Foreign Worker</th>
+                    <th>Age</th>
+                    <th>Other Payment Plans</th>
+                    <th>Checking status</th>
+                    <th>Credit history</th>
+                    <th>Savings status</th>
+                    <th>Current occupationv</th>
+                    <th>Employer/Company Name</th>
+                    <th>Employment Since</th>
+                    <th>Installment Commitment</th>
+                    <th>Residence Since</th>
+                    <th>Property Magnitude</th>
+                    <th>Num Dependendents</th>
+                    <th>Loan Duration</th>
+                    <th>Loan Purpose</th>
+                    <th>Credit amount</th>
+                    <th>Existing Credits</th>
+                    <th>Other Parties</th>
+                    <th>Application Status</th>
+                </tr>  
+                
+                <tr>
+                    <td>{{ item["fullname"] }}</td>
+                    <td>{{ item["address"] }}</td>
+                    <td>{{ item["email"] }}</td>
+                    <td>{{ item["personal_status"] }}</td>
+                    <td>{{ item["housing"] }}</td>
+                    <td>{{ item["job"] }}</td>
+                    <td>{{ item["own_telephone"] }}</td>
+                    <td>{{ item["foreign_worker"] }}</td>
+                    <td>{{ item["age"] }}</td>
+                    <td>{{ item["other_payment_plans"] }}</td>
+                    <td>{{ item["checking_status"] }}</td>
+                    <td>{{ item["credit_history"] }}</td>
+                    <td>{{ item["savings_status"] }}</td>
+                    <td>{{ item["occupation"] }}</td>
+                    <td>{{ item["employer"] }}</td>
+                    <td>{{ item["employment"] }}</td>
+                    <td>{{ item["installment_commitment"] }}</td>
+                    <td>{{ item["residence_since"] }}</td>
+                    <td>{{ item["property_magnitude"] }}</td>
+                    <td>{{ item["num_dependents"] }}</td>
+                    <td>{{ item["duration"] }}</td>
+                    <td>{{ item["purpose"] }}</td>
+                    <td>{{ item["credit_amount"] }}</td>
+                    <td>{{ item["existing_credits"] }}</td>
+                    <td>{{ item["other_parties"] }}</td>
+                    <td>{{ item["output"] }}</td>
+                </tr>
+            </table>
+            
+        </div>
+</body>
+</html>

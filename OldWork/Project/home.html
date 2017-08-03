@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Mortgage Application Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link href="quickmsg.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div id="navBar">
+            <ul>
+                <li><a href="/reviews" >Review</a></li>
+                <li><a href="/backup">Backup data</a></li>
+            </ul>
+
+    </div>
+    
+        <div id="container">
+
+
+        <div id = header>
+
+            <h1>Online Mortgage Application Form</h1>
+
+            <h3>Please fill in our Mortgage Application Form. 
+                        All fields are required in terms of providing you with a complete and accurate mortgage loan offer.</h3>
+
+        </div>
+
+    <form action="#">
+
+<div><h3>Personal Details</h3></div>
+        
+      <div>
+        <label class="desc" for="fullname">Full Name</label>
+        <div>
+          <input id="fullname" name="fullname" type="text" class="field text fn" value="" size="8" tabindex="1" placeholder="Ken Adams">
+        </div>
+      </div>
+
+      <div>
+        <label class="desc" for="address_1">Adress</label>
+        <div>
+            <input id="address_1" name="address_1" type="email" spellcheck="false" value="" maxlength="255" tabindex="3" placeholder="Street Adress">
+            <input id="address_2" name="address_2" type="email" spellcheck="false" value="" maxlength="255" tabindex="3" placeholder="City">
+            <input id="address_3" name="address_3" type="email" spellcheck="false" value="" maxlength="255" tabindex="3" placeholder="Country">
+            <input id="address_4" name="address_4" type="email" spellcheck="false" value="" maxlength="255" tabindex="3" placeholder="Postal/Zip Code">
+       </div>
+      </div>
+
+      <div>
+        <label class="desc" for="email">Email</label>
+
+        <div>
+            <input id="email" name="email" type="email" spellcheck="false" value="" maxlength="255" tabindex="3" placeholder="example@gmail.com">
+        </div>
+      </div>
+
+            <div>
+              <label for="personal_status">Personal Status</label>
+        <div>
+              <select id="personal_status" >
+                  <option value=""></option>
+                  <option value="-1">Male single</option>
+                  <option value="-0.7">Female div/dep/mar</option>
+                  <option value="0.5">Male div/sep</option>
+                  <option value="1">Male mar/wid</option>
+              </select>
+        </div>
+    </div>  
+
+    <div>
+                  <label for="housing">Housing</label>
+            <div>
+                  <select id="housing">
+                      <option value=""></option>
+                      <option value="-1">Rent</option>
+                      <option value="0">For Free</option>
+                      <option value="1">Own</option>
+                  </select>
+            </div>
+        </div>  
+            
+        <div>
+                  <label for="job">Job</label>
+            <div>
+                  <select id="job">
+                      <option value=""></option>
+                      <option value="-1">unemp/unskilled non res</option>
+                      <option value="-0.7">unskilled resident</option>
+                      <option value="0.3">skilled</option>
+                      <option value="1">high qualif/self emp/mgmt</option>
+                  </select>
+            </div>
+        </div>  
+        
+        <div>
+            <fieldset>
+
+              <legend for="own_telephone">Own Telephone</legend>
+
+              <div>
+                <div>
+                    <input id="own_telephone_1" name="own_telephone" type="radio" value="-1" tabindex="6">
+                    <label class="choice" for="own_telephone_1">None</label>
+                </div>
+                <div>
+                    <input id="own_telephone_2" name="own_telephone" type="radio" value="1" tabindex="7">
+                    <label class="choice" for="own_telephone_2">Yes</label>
+                </div>
+              </div>
+            </fieldset>
+      </div>
+        
+        <div>
+            <fieldset>
+
+              <legend for="foreign_worker">Foreign Worker</legend>
+
+              <div>
+                <div>
+                    <input id="foreign_worker_1" name="foreign_worker" type="radio" value="-1" tabindex="6">
+                    <label class="choice" for="foreign_worker_1">No</label>
+                </div>
+                <div>
+                    <input id="foreign_worker_2" name="foreign_worker" type="radio" value="1" tabindex="7">
+                    <label class="choice" for="foreign_worker_2">Yes</label>
+                </div>
+              </div>
+            </fieldset>
+      </div> 
+                
+            <div>
+                  <label for="age">Age</label>
+            <div>
+                  <select id="age">
+                      <option value=""></option>
+                      <option value="-1">&lt;=24</option>
+                      <option value="-0.7">25-27</option>
+                      <option value="-0.5">28-30</option>
+                      <option value="-0.3">31-34</option>
+                      <option value="0">35-38</option>
+                      <option value="0.3">39-45</option>
+                      <option value="0.5">46-56</option>
+                      <option value="0.7">57-67</option>
+                      <option value="1">&gt;67</option>
+                  </select>
+            </div>
+        </div>          
+            
+        <div>
+            <fieldset>
+
+              <legend for="other_payment_plans">Other Payment Plans</legend>
+
+              <div>
+                <div>
+                    <input id="other_payment_plans_1" name="other_payment_plans" type="radio" value="-1" tabindex="5">
+                    <label class="choice" for="other_payment_plans_1">None</label>
+                </div>
+                <div>
+                    <input id="other_payment_plans_2" name="other_payment_plans" type="radio" value="0" tabindex="6">
+                    <label class="choice" for="other_payment_plans_2">Bank</label>
+                </div>
+                <div>
+                    <input id="other_payment_plans_3" name="other_payment_plans" type="radio" value="1" tabindex="7">
+                    <label class="choice" for="other_payment_plans_3">Stores</label>
+                </div>
+              </div>
+            </fieldset>
+      </div>
+
+            <div>
+                  <label for="checking_status">Checking status</label>
+            <div>
+                  <select id="checking_status" >
+                      <option value=""></option>
+                      <option value="-1">No checking</option>
+                      <option value="-0.7">&lt;0</option>
+                      <option value="0.3">0-200</option>
+                      <option value="1">&gt;200</option>
+                  </select>
+            </div>
+        </div>  
+            
+            <div>
+                  <label for="credit_history">Credit history</label>
+            <div>
+                  <select id="credit_history" >
+                      <option value=""></option>
+                      <option value="-1">Critical/Other existing credit</option>
+                      <option value="-0.7">Existing paid</option>
+                      <option value="0">Delayed previously</option>
+                      <option value="0.3">No credits/All paid</option>
+                      <option value="1">All paid</option>
+                  </select>
+            </div>
+        </div>    
+            
+            <div>
+                  <label for="savings_status">Savings status</label>
+            <div>
+                  <select id="savings_status" >
+                      <option value=""></option>
+                      <option value="-1">No known savings</option>
+                      <option value="-0.7">&lt;100</option>
+                      <option value="0">100-500</option>
+                      <option value="0.3">501-1000</option>
+                      <option value="1">&gt;1000</option>
+                  </select>
+            </div>
+        </div>  
+        
+            
+            
+<div><br><h3>Employment</h3></div>    
+            
+        <div>
+            <label class="desc" for="occupation">Current occupation</label>
+            <div>
+            <input id="occupation" name="occupation" type="text" class="field text fn" value="" size="8" tabindex="1" placeholder="Hard Worker">
+            </div>
+      </div>
+            
+            
+        <div>
+            <label class="desc" for="employer">Employer/Company Name</label>
+            <div>
+        <input id="employer" name="employer" type="text" class="field text fn" value="" size="8" tabindex="1" placeholder="Milly Bakery">
+            </div>
+      </div>
+            
+            <div>
+                  <label for="employment">Employment Since</label>
+            <div>
+                  <select id="employment" >
+                      <option value=""></option>
+                      <option value="-1">Unemployed</option>
+                      <option value="-0.7">&lt;1 Year</option>
+                      <option value="0">1-3 Years</option>
+                      <option value="0.3">4-7 Years</option>
+                      <option value="1">&gt;7 Years</option>
+                  </select>
+            </div>
+        </div>  
+            
+            <div>
+                  <label for="installment_commitment">Installment Commitment</label>
+            <div>
+                  <select id="installment_commitment" >
+                      <option value=""></option>
+                      <option value="-1">1</option>
+                      <option value="-0.7">2</option>
+                      <option value="0.3">3</option>
+                      <option value="1">4</option>
+                  </select>
+            </div>
+        </div>  
+            
+            <div>
+                  <label for="residence_since">Residence Since</label>
+            <div>
+                  <select id="residence_since">
+                      <option value=""></option>
+                      <option value="-1">1</option>
+                      <option value="-0.7">2</option>
+                      <option value="0.3">3</option>
+                      <option value="1">4</option>
+                  </select>
+            </div>
+        </div>  
+  
+<div><br><h3>Mortgage Loan Details</h3></div> 
+        
+                  
+            <div>
+                  <label for="property_magnitude">Property Magnitude</label>
+            <div>
+                  <select id="property_magnitude">
+                      <option value=""></option>
+                      <option value="-1">No known property</option>
+                      <option value="-0.7">Car</option>
+                      <option value="0.3">Life insurance</option>
+                      <option value="1">Real estate</option>
+                  </select>
+            </div>
+        </div>  
+                        
+            <div>
+                  <label for="num_dependents">Num Dependendents</label>
+            <div>
+                  <select id="num_dependents">
+                      <option value=""></option>
+                      <option value="-1">1</option>
+                      <option value="1">2</option>
+                  </select>
+            </div>
+        </div>  
+        
+            <div>
+                  <label for="duration">Loan Duration</label>
+            <div>
+                  <select id="duration" >
+                      <option value=""></option>
+                      <option value="-1">&lt;=10</option>
+                      <option value="-0.7">11-15</option>
+                      <option value="-0.5">16-23</option>
+                      <option value="-0.3">24-28</option>
+                      <option value="0">29-36</option>
+                      <option value="0.1">39-45</option>
+                      <option value="0.3">46-50</option>
+                      <option value="0.5">51-69</option>
+                      <option value="1">=&gt;70</option>
+                  </select>
+            </div>
+        </div>  
+            
+                    <div>
+                  <label for="purpose">Loan Purpose</label>
+            <div>
+                  <select id="purpose" >
+                      <option value=""></option>
+                      <option value="-1">Radio / TV</option>
+                      <option value="-0.7">Business</option>
+                      <option value="-0.5">Education</option>
+                      <option value="-0.3">Repairs</option>
+                      <option value="0">Retraining</option>
+                      <option value="0.1">Used car</option>
+                      <option value="0.3">New car</option>
+                      <option value="0.5">Furniture/equipment</option>
+                      <option value="0.7">Domestic appliance</option>
+                      <option value="1">Other</option>
+                  </select>
+             </div>
+        </div>  
+            
+            <div>
+                  <label for="credit_amount">Credit amount</label>
+            <div>
+                  <select id="credit_amount" >
+                      <option value=""></option>
+                      <option value="-1">&lt;=1200</option>
+                      <option value="-0.7">1201-1500</option>
+                      <option value="-0.5">1501-2100</option>
+                      <option value="-0.3">2101-2800</option>
+                      <option value="0">2801-3900</option>
+                      <option value="0.3">3901-6700</option>
+                      <option value="0.5">6701-10000</option>
+                      <option value="0.7">10001-13000</option>
+                      <option value="1">&gt;13000</option>
+                  </select>
+            </div>
+        </div>
+            
+        <div>
+                  <label for="existing_credits">Existing Credits</label>
+            <div>
+                  <select id="existing_credits">
+                      <option value=""></option>
+                      <option value="-1">1</option>
+                      <option value="-0.7">2</option>
+                      <option value="0.3">3</option>
+                      <option value="1">4</option>
+                  </select>
+             </div>
+        </div>
+               
+        <div>
+            <fieldset>
+              <legend for="other_parties">Other Parties</legend>
+              <div>
+                <div>
+                    <input id="other_parties_1" name="other_parties" type="radio" value="-1" tabindex="5">
+                    <label class="choice" for="other_parties_1">None</label>
+                </div>
+                <div>
+                    <input id="other_parties_2" name="other_parties" type="radio" value="0" tabindex="6">
+                    <label class="choice" for="other_parties_2">Co-Applicant</label>
+                </div>
+                <div>
+                    <input id="other_parties_3" name="other_parties" type="radio" value="1" tabindex="7">
+                    <label class="choice" for="other_parties_3">Guarantor</label>
+                </div>
+              </div>
+        </fieldset>
+    </div>    
+        
+        <div>
+            <input type="button" value="Submit Application" id="btnCalc">
+        </div>
+
+        <div>
+            <label style="width: 100%; text-align: left;">Application Status: <span id="prediction" class="result"></span></label>
+        </div>
+        </form>
+</div>
+<script src="static/js/jquery-2.2.4.min.js" type="application/javascript"></script>
+<script src="static/js/quickmsg.js" type="application/javascript"></script>
+<script src="static/js/main.js" type="application/javascript"></script>
+</body>
+</html>

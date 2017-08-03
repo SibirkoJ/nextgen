@@ -1,0 +1,62 @@
+div#QuickMessage {
+	display:none;
+	position:fixed;
+	top:20%;
+	left:50%;
+	margin-left:-179px;
+	width:350px;
+	text-align:center;
+	background-origin:border-box;
+	background-clip:border-box;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	font-size:13px;
+	z-index:9999999;
+	background-color:aliceblue
+}
+div#QuickMessage div#QuickMessageContent {
+	padding:15px
+}
+div#QuickMessage div#QuickMessageActions {
+	padding:0 15px 15px 15px
+}
+div#QuickMessage.flatBtn {
+	margin:0 2px
+}
+div#ModalOverlay {
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	width:auto;
+	height:auto;
+	z-index:9000;
+	background:rgba(0,0,0,0.5)
+}
+div#QuickMessage.notification {
+	border:1px solid#2f8cff;
+	box-shadow:0 0 25px 5px#2f8cff;
+	-moz-box-shadow:0 0 25px 5px#2f8cff;
+	-webkit-box-shadow:0 0 25px 5px#2f8cff
+}
+div#QuickMessage.warning {
+	border:1px solid#dbba00;
+	box-shadow:0 0 25px 5px#dbba00;
+	-moz-box-shadow:0 0 25px 5px#dbba00;
+	-webkit-box-shadow:0 0 25px 5px#dbba00
+}
+div#QuickMessage.error {
+	border:1px solid#c11616;
+	box-shadow:0 0 25px 5px#c11616;
+	-moz-box-shadow:0 0 25px 5px#c11616;
+	-webkit-box-shadow:0 0 25px 5px#c11616
+}
+div#QuickMessage.success {
+	border:1px solid#15c215;
+	box-shadow:0 0 25px 5px#15c215;
+	-moz-box-shadow:0 0 25px 5px#15c215;
+	-webkit-box-shadow:0 0 25px 5px#15c215
+}

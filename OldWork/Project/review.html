@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Mortgage Application Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link href="quickmsg.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div id="navBar">
+
+    <ul>
+         <li><a href="/" >Home</a></li>
+         <li><a href="/review">Review</a></li>
+        <li><a href="/backup">Backup data</a></li>
+    </ul>
+
+    </div>
+
+    <div id="container">
+
+        <div id = header></div>
+
+    <form action="#">
+
+      <div><h3>Personal Details</h3></div>
+
+      <div>
+        <label class="desc" for="fullname">Full Name</label>
+        <div>
+          <span id="fullname">Daniel Richards</span>
+        </div>
+      </div>
+
+      <div>
+        <label class="desc">Adress</label>
+        <div>
+            <span>Wallisdown Road</span><br>
+            <span>London</span><br>
+            <span>UK</span><br>
+            <span>BH1 4BB</span>
+       </div>
+      </div>
+
+      <div>
+        <label class="desc" for="email">Email</label>
+
+        <div>
+            <span id="email">dan@example.com</span>
+        </div>
+      </div>
+
+        <div>
+            <label for="personal_status">Personal Status</label>
+            <div>
+                  <span id="personal_status">Married</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="housing">Housing</label>
+            <div>
+                  <span id="housing">Rent</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="job">Job</label>
+            <div>
+                  <span id="job">Unskilled Resident</span>
+            </div>
+        </div>
+
+        <div>
+            <legend for="own_telephone">Own Telephone</legend>
+            <div>
+                  <span id="own_telephone">None</span>
+            </div>
+
+        </div>
+
+        <div>
+            <legend for="foreign_worker">Foreign Worker</legend>
+            <div>
+                  <span id="foreign_worker">No</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="age">Age</label>
+            <div>
+                  <span id="age">35-38</span>
+            </div>
+        </div>
+
+        <div>
+            <legend for="other_payment_plans">Other Payment Plans</legend>
+            <div>
+                  <span id="other_payment_plans">None</span>
+            </div>
+      </div>
+
+        <div>
+            <label for="checking_status">Checking status</label>
+            <div>
+                  <span id="checking_status">0-200</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="credit_history">Credit history</label>
+            <div>
+                  <span id="credit_history">Existing Paid</span>
+            </div>
+        </div>
+
+        <div>
+          <label for="savings_status">Savings status</label>
+            <div>
+                  <span id="savings_status">200</span>
+            </div>
+        </div>
+
+<div><br><h3>Employment</h3></div>
+
+      <div>
+            <label class="desc" for="occupation">Current occupation</label>
+            <div>
+                <span id="occupation">Developer</span>
+            </div>
+      </div>
+
+      <div>
+            <label class="desc" for="employer">Employer/Company Name</label>
+            <div>
+                <span id="employer">Progress</span>
+            </div>
+      </div>
+
+        <div>
+            <label for="employment">Employment Since</label>
+            <div>
+                 <span id="employment">2</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="installment_commitment">Installment Commitment</label>
+            <div>
+                  <span id="installment_commitment">3</span>
+            </div>
+        </div>
+
+        <div>
+           <label for="residence_since">Residence Since</label>
+            <div>
+                  <span id="residence_since">2</span>
+            </div>
+        </div>
+
+<div><br><h3>Mortgage Loan Details</h3></div>
+
+        <div>
+            <label for="property_magnitude">Property Magnitude</label>
+            <div>
+                  <span id="property_magnitude">Car</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="num_dependents">Num Dependendents</label>
+            <div>
+                  <span id="num_dependents">1</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="duration">Loan Duration</label>
+            <div>
+                 <span id="duration">11-15</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="purpose">Loan Purpose</label>
+            <div>
+                  <span id="purpose">Education</span>
+             </div>
+        </div>
+
+        <div>
+            <label for="credit_amount">Credit amount</label>
+            <div>
+                  <span id="credit_amount">2101-2800</span>
+            </div>
+        </div>
+
+        <div>
+                  <label for="existing_credits">Existing Credits</label>
+            <div>
+                  <span id="existing_credits">3</span>
+             </div>
+        </div>
+
+        <div>
+              <legend for="other_parties">Other Parties</legend>
+            <div>
+                  <span id="other_parties">None</span>
+             </div>
+        </div>
+
+    <div>
+        <br />
+        <div>
+            <div>
+            <label>Loan rate:</label>
+            <label for="loan-good">Good</label>
+            <input type="radio" id="loan-good" value="1" name="rate"/>
+            <label for="loan-bad">Bad</label>
+            <input type="radio" id="loan-bad" value="-1" name="rate"/>
+            </div>
+            <div>
+            <input type="button" value="Save" id="btnSave" style="vertical-align: top; margin: 0 !important;" disabled="true" class="disabled">
+            </div>
+        </div>
+    </div>
+        <input type="hidden" id="filename" value='{{ data["filename"] }}'>
+    </form>
+    </div>
+<script src="/static/js/jquery-2.2.4.min.js" type="application/javascript"></script>
+<script src="/static/js/quickmsg.js" type="application/javascript"></script>
+<script src="/static/js/review.js" type="application/javascript"></script>
+</body>
+</html>
