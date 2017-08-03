@@ -1,1 +1,0 @@
-# sibirkoj.github.io
