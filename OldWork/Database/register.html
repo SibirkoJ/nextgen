@@ -1,0 +1,121 @@
+<html lang="en">
+     
+        <link rel = "icon" href = "Images/webitelogo.jpg">
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <title>BU Database Project</title> 
+            <link rel="stylesheet" href="style.css" type="text/css">
+
+               <header class = "mainheader">
+                        <img src='Images/mylogo.png' hspace="35%">
+                </header>
+            <body class = "body">    
+                <div class = "navigationbar"> 
+                    <nav>
+                       <ul>
+                       <li><a href = "home.php"> Home</a></li>
+                       <li><a href = "register.php"> Register</a></li>
+                       <li><a href = "login.php"> Login</a></li>
+                       </ul>
+                    </nav>
+                </div>
+         <div class = "content" 
+              style="background: url(Images/logpic.png);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: 510px 610px;">
+             
+                <body>
+                    <h4 align="center" >Please enter your details</h4>
+                    
+                    <article class = "uppercontent">
+                    
+                        <a href="index.php">⇦Back to index page</a><br><br>
+                        
+                        <label>Already have an account ?</label><a href="login.php">Click to login.</a>
+
+                        <form action="register.php" class="cleanform" method="POST">
+
+    <br><label>Username:</label>      
+        <input type="text" size="30%" style="" name="username" required="required" placeholder="ex. Student"/>
+        <span class="error"><font color="red">* <?php echo $makeErr;?></font></span><br>
+   
+    <label>Lastname:</label>      
+        <input type="text" size="30%" style="" name="lastname" required="required" placeholder="ex. Jones"/>
+        <span class="error"><font color="red">* <?php echo $makeErr;?></font></span> <br>                    
+                        
+    <label>Password:</label>      
+        <input type="password" size="30%" style="" name="password" required="required" placeholder="ex. *******"/>
+        <span class="error"><font color="red">* <?php echo $makeErr;?></font></span><br>
+    
+    <label>Email:</label>         
+        <input type="email" size="30%" style="" name="email" required="required" placeholder="ex. iamawesome@gmail.com"/>
+        <span class="error"><font color="red">* <?php echo $makeErr;?></font></span><br>
+   
+    <label>Country:</label>       
+        <input type="text" size="30%" style="" name="country" required="required" placeholder="ex. United Kingdom"/>
+        <span class="error"><font color="red">* <?php echo $makeErr;?></font></span><br>
+    
+    <label>City:</label>          
+        <input type="text" size="30%" style="" name="city" required="required" placeholder="ex. Bournemouth"/>
+        <span class="error"><font color="red">* <?php echo $makeErr;?></font></span><br>
+    
+    <label>Contact Number:</label>  
+        <input type="text" size="30%" style="" name="phone" required="required" placeholder="ex. 012345678"/> 
+        <span class="error"><font color="red">* <?php echo $makeErr;?></font></span><br><br>
+                            
+                        <input type="submit" value="Register"/>
+                        
+                    </form>
+                </article>        
+            </body>
+        </div>
+    </body>  
+</html>
+   
+<?php
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    
+    $bool = true;
+	
+    $conn = mysqli_connect("127.0.0.1","i7674720","22043f22872f107da3551a564aff3ee6","i7674720") or die (mysql_errno());
+    $query = mysqli_query($conn, "SELECT * from users");
+    
+	$username = mysqli_real_escape_string($conn, $_POST['username']);
+    $lastname = mysqli_real_escape_string($conn, $_POST['lastname']);
+	$password = mysqli_real_escape_string($conn, $_POST['password']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $country = mysqli_real_escape_string($conn, $_POST['country']);
+	$city = mysqli_real_escape_string($conn, $_POST['city']);
+    $phone = mysqli_real_escape_string($conn, $_POST['phone']);
+	
+        while($row = mysqli_fetch_assoc($query)) 
+        {
+            $table_users = $row['username']; 
+
+            if($username == $table_users) 
+            {
+                $bool = false; 
+                Print '<script>alert("Invalid user input!");</script>'; 
+                Print '<script>window.location.assign("register.php");</script>'; 
+            
+            }
+        }
+
+        if($bool)
+        {
+            //$password = crypt($password);
+            mysqli_query($conn, "INSERT INTO users (username, lastname, password, email, country, city, phone) 
+            
+                        VALUES ('$username', '$lastname', '$password','$email','$country','$city','$phone')"
+            
+            ); 
+            
+            echo '<script>alert("Successfully Registered!");</script>'; 
+            echo '<script>window.location.assign("register.php");</script>'; 
+        }
+        mysqli_close($conn);
+    }
+?>
+

@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <link rel = "icon" href = "Images/webistelogo.jpg">
+    <script src="jquery-1.11.3.min.js"></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>BU Database Project</title> 
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+     <header class = "mainheader">
+                        <img src='Images/mylogo.png' hspace="35%">
+    </header>
+<body class = "body">    
+    <div class = "navigationbar"> 
+           <nav><ul>
+                 <li><a href = "home.php"> Home</a></li>
+                 <li><a href = "register.php"> Register</a></li>
+                 <li><a href = "login.php"> Login</a></li>
+                </ul></nav>
+       </div>
+            <div class = "content" 
+                 style="background: url(Images/logpic.png);
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        background-size: 420px 420px;">
+                
+                <h4 align="center">Please log on to continue</h4>
+                    
+                <article class = "uppercontent">
+                    <body>
+                        <a href="index.php">⇦Back to index page</a><br><br>
+                        
+                        <label>Don't have an account ?</label><a href="register.php">Click to register.</a>
+                
+                        <form action="checklogin.php" method="POST">
+                           
+                        <br><label>Username:</label>      
+                <input type="text" size="30" style="" name="username" required="required" placeholder="ex. Student"/> <br>
+
+                            <label>Password:</label>      
+                <input type="password" size="30" style="" name="password" required="required" placeholder="ex.*******"/> 
+                           
+                            <br><br><input type="submit" value="Login"/>
+                        </form>
+                    </body>
+                </article>
+            </div>
+    </body>
+</html>
