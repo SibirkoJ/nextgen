@@ -288,6 +288,12 @@ INPUT:hover {
     padding-right: 13%;
 }
 
+#levelH {
+    width: 450px;
+    height: 300px;
+    float: left;
+}
+
 #levelI {
     width: 450px;
     height: 300px;
@@ -295,12 +301,6 @@ INPUT:hover {
 }
 
 #levelC {
-    width: 450px;
-    height: 300px;
-    float: left;
-}
-
-#feg {
     float: right;
     text-align: left;
     
@@ -333,16 +333,12 @@ INPUT:hover {
     float: left;
 }
 
-.plane {
+.project {
     float: right;
     text-align: left;
     width: 350px;
     height: 300px;
 } 
-
-#partTwo img{
-
-}
 
 #partTwo img:hover {
     @extend .img;
@@ -404,26 +400,10 @@ INPUT:hover {
     padding-right: 15%;
 }
 
-.modalUpload {padding: 2px 16px;}
-
-@-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-}
-
-@keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-}
-
 #footerWrapper {
-    vertical-align: middle;
-    line-height: 35px;
-    
-    height: 200px;
+    height: 100px;
     width: 100%;
     float: left;
-    color: #85C724;
     position: static;
     
     padding-top: 20px;
@@ -437,32 +417,43 @@ INPUT:hover {
     width: 350px;
     height: 50px;
     float: left;
-    margin-left: 250px;
-
+    margin-left: 41%;
 }
 
-#footerGroup1 {
-    width: 250px;
-    height: 50px;
-    float: left;
+#footerMenu {
+    margin-top: 4%;
+    width: 200px;
+    margin-left: 45%;
 }
 
-#footerGroup2 {
-    width: 250px;
-    height: 50px;
-    float: left;
+     
+.fa {
+    font-size: 40px;
+    vertical-align: center;
+    height: 40px;
+    width: 40px;
+
+  text-decoration: none;
+  border-radius: 50%;
+}  
+
+.fa:hover {
+    opacity: 0.7;
 }
 
-#footerGroup3 {
-    float: left;
-    width: 250px;
-    height: 50px;
+.fa-facebook {
+  color: white;
 }
 
-#copyright {
-    padding-top: 50px;
-    float: center;
-    height: 5px;
+.fa-twitter {
+  color: white;
+}
+.fa-linkedin {
+  color: white;
+}
+    
+.fa-envelope {
+  color: white;
 }
 
 /*---------For tablets and smaller screens-----------------------*/
