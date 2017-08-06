@@ -23,12 +23,12 @@
         </li>
         <li><a href=""><b>Content</b></a>
             <ul class="submenu">
-                <li><a href="resume.html">Resume</a></li>
+                <li><a href="resume.html">About Me</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="">Getting Started</a></li>
+                <li><a href="just.html">Getting Started</a></li>
             </ul>
         </li>
-        <li><a href=""><b>Acess</b></a>
+        <li><a href=""><b>Access</b></a>
             <ul class="submenu">
                 <li><a href="register.html">Register</a></li>
                 <li><a href="log.html">Log In</a></li>
@@ -49,9 +49,9 @@
         
 		<div id ="partZero">	
             
-            <font face= 'Brush Script MT' size ='9%' color="#85C724">Let's Build Something Cool Together</font><br>
+            <font face= 'Brush Script MT' size ='9%' color="#85C724">Building Something Cool Together</font><br>
             
-            <font face= 'Brush Script MT' size ='6%' color="#85C724">The idea from you the development from us</font><br>
+            <font face= 'Brush Script MT' size ='6%' color="#85C724">The idea from you, the development from us</font><br>
         </div>
             
         <div id ="partOne">	
@@ -64,7 +64,35 @@
         
         <div id="partFour">
         
-            <p><center><font size="5" face="verdana">Get in touch ! Let's discuss your ideas. </font></center></p><br>    
+            <p><center><font size="5" face="verdana">Get in touch ! Let's discuss your ideas. </font></center></p><br>   
+            
+            <form align="center" action="register.php" class="regForm" method="POST">
+                
+                <div>
+                    <label>Name:</label> 
+                    <div>
+                        <input type="text" size="30%" style="" name="username" required="required" placeholder="ex. Jonathan"/><br>
+                    </div>
+                </div>
+
+                <div>
+                    <label>Email:</label> 
+                    <div>     
+                    <input type="text" size="30%" style="" name="email" required="required" placeholder="ex. @example.com"/><br>    
+                    </div>
+                </div>
+                
+                <div>
+                    <label>General Idea:</label> 
+                    <div>     
+                <input type="text" size="30%" style="" name="idea" required="required" placeholder="ex. I want to build..."/><br><br>
+                    </div>
+                </div>
+                
+                <div>
+                    <input type="button" onclick="alert('Successfuly Submited !')" style="background-color: #85C724;" value="Submit"/>
+                </div>
+            </form>
         
         </div>
         
