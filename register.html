@@ -21,12 +21,12 @@
         </li>
         <li><a href=""><b>Content</b></a>
             <ul class="submenu">
-                <li><a href="mortgage.html">Mortgage</a></li>
-                <li><a href="ai.html">Artificial</a></li>
-                <li><a href="analyse.html">System</a></li>
+                <li><a href="Resume.html">About Me</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="just.html">Getting Started</a></li>
             </ul>
         </li>
-        <li><a href=""><b>Acess</b></a>
+        <li><a href=""><b>Access</b></a>
             <ul class="submenu">
                 <li><a href="register.html">Register</a></li>
                 <li><a href="log.html">Log In</a></li>
@@ -37,47 +37,59 @@
     
     </div>
     
-    <div id ="partLogo">
-            <img src="Images/mylogo.png" alt="logo" 
-                 style="width:750px;height:150px;
-                        -webkit-filter: drop-shadow(10px 10px 10px #100); 
-                        filter: drop-shadow(10px 10px 10px #100);">
-        </div>
-    
 	<div id ="mainContent">
         
         <div id ="partZero">	
             
-            <font face= 'Brush Script MT' size ='9%' color="#85C724">Welcome to the world of</font><br>
+            <font face= 'Brush Script MT' size ='9%' color="#85C724">Let's become friends</font><br>
             
-            <font face= 'Brush Script MT' size ='6%' color="#85C724">Freelance Web Development</font><br>
+            <font face= 'Brush Script MT' size ='6%' color="#85C724">Sign up and start a chat directly with the developer</font><br>
         </div>
             
-        <div id ="partOne">	
+        <div id ="partRegister">	
                       
-            <p>First Name: <input type="text" size="30" name="fname" required="required" placeholder="ex. John"/></p>
-            
-            <p>Second Name: <input type="text" size="30" name="fname" required="required" placeholder="ex. Malkovich"/></p>
-            
-            <p>Username: <input type="text" size="30" name="fname" required="required" placeholder="ex. gamebot32"/></p>
-            
-            <p>Password: <input type="text" size="30" name="fname" required="required"/></p>
-            
-            <p>Confirm Password: <input type="text" size="30" name="fname" required="required"/></p>
+            <form align="center" action="register.php" class="regForm" method="POST">
+
+            <font face="verdana" size ='5' >Please enter your details</font><br><br>
+                
+                <div>
+                    <label>Username:</label> 
+                    <div>
+                        <input type="text" size="30%" style="" name="username" required="required" placeholder="ex. Jonathan"/><br>
+                    </div>
+                </div>
+
+                <div>
+                    <label>Email:</label> 
+                    <div>     
+                    <input type="text" size="30%" style="" name="email" required="required" placeholder="ex. @example.com"/><br>    
+                    </div>
+                </div>
+                
+               <div>
+                    <label>Password:</label> 
+                    <div>     
+                    <input type="text" size="30%" style="" name="password" required="required" placeholder="ex. *******"/><br>
+                    </div>
+                </div>
+                
+                <div>
+                    <label>Area of Interest:</label> 
+                    <div>     
+                <input type="text" size="30%" style="" name="idea" required="required" placeholder="ex. I want to build..."/><br><br>
+                    </div>
+                </div>
+                
+                <div>
+                    <input type="button" onclick="alert('Successfuly Registered !')" style="background-color: #85C724;" value="Register"/>
+                </div>
+            </form>
             
         </div>
-        
-        <div id ="partFour">	
-            <br>
-            <br>
-        </div>
-        
             
     </div>    
 
     <div id="footerWrapper">
-
-    <div id="footerMenu">
         
         <div id = "footerLogo">
         <img src="Images/mylogo.png" alt="logo" 
@@ -88,59 +100,20 @@
                 float:left;
                 ">
         </div>
+
+        <div id="footerMenu">
         
-        <div id = "footerGroup1">
+            <a href="#" class="fa fa-facebook"></a>
 
-            <li class="">
-        <a target="" href="">Option1</a>
-            </li>
+            <a href="#" class="fa fa-twitter"></a>
 
-            <li class="">
-        <a target="" href="">Solutions</a>
-            </li>
-
-            <li class="">
-        <a target="" href="">Partners</a>
-            </li>
-
-            <li class="">
-        <a target="" href="">Resources</a>
-            </li>
-        </div>
+            <a href="#" class="fa fa-linkedin"></a>
             
-            
-        <div id = "footerGroup2"> 
-            
-            <li class="">
-        <a target="" href="">About Us</a>
-            </li>
-
-            <li class="">
-        <a target="" href="">Careers</a>
-            </li>
-
-            <li class="">
-        <a target="" href="">Press &amp; Events</a>
-            </li>
-
-            <li class="">
-        <a target="" href="">FAQ</a>
-            </li>
-        </div>
-           
+            <a href="mailto:y4ebno@gmail.com" class="fa fa-envelope"></a>
         
-        <div id = "footerGroup3">
-            <li class="">
-        <a target="" href="">Blog</a>
-            </li>
-
-            <li class="">
-        <a target="" href="">Contact Us</a>
-            </li>
         </div>
         
     </div> 
-</div> 
-
+    
 </body>
 </html>
