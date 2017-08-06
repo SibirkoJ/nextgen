@@ -1,0 +1,245 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel = "icon" href = "Images/Sniff_Scratch.png">
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <link rel="stylesheet" href="styleCompiler.css" type="text/css" />
+        <script src="JS/jquery-3.0.0.min.js"></script>
+        <script src="JS/purl.js"></script>
+        <title>Sniff.org</title>
+    </head>
+    
+<body>
+    <div id = "navBar">
+
+     <scrtch>
+    <b><font face="NanumPenScript" size ='8%' color="#D47E36">Sniff and </font></b>
+
+<a href="https://scratch.mit.edu/" target=_blank>       
+    <img src='Images/Scratch_logo.png' alt ="Scratch" width ="140px" height ="45px" >
+</a>
+     </scrtch>
+        
+    <nav><ul>
+         <li><a href = "index.html" >⇦Logout</a></li>
+    </ul></nav>
+        
+    </div>   
+        
+<div id = "mainContentHome">    
+
+    <div id = "sidebarHome">
+        
+    <font face="NanumPenScript" size ='7%' color="#D47E36" >Hello User !</font><br>
+
+        <button id="add">Add a new project</button>
+        
+        <p><a href='sniffPad.php'>Compiler</a></p>
+        
+        <p><a href='sniffPaint.php'>Sniff Paint</a></p>
+
+<form enctype="multipart/form-data" action ="home.php" method ="post"  id="popUp" class="modal">
+        
+    <div class="modal-content">
+            
+        <div class="modal-header">
+                <b><font face="NanumPenScript" size ='6%' color="#D47E36">Choose or Upload your new Sniff project</font></b>
+
+                <span class="close">×</span>
+        </div> 
+        
+        <div class="modalUpload">
+
+            <br><input type="hidden" name="MAX_FILE_SIZE" value="8000000" />
+
+                <input type="file" name="data" />
+
+                <input type="submit" name="submit" value="Upload Project" /><br><br>
+
+        </div>
+        
+        <div class="modalAdd">
+            <select class="my-select" name="projectName">
+                            
+                <option value="0" selected="selected">Select a Project</option>
+                <option value="circle">Circle</option>
+                <option value="hello">Hello</option>
+                <option value="clock">Clock</option>
+                <option value="prime">Prime</option>
+                <option value="spectrum">Spectrum</option>
+                <option value="spiro">Spiro</option>
+                <option value="test">Test</option>
+                <option value="window">Window</option>
+                
+            </select>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="submit" value="Add Project">
+        </div> 
+            
+    </div>
+</form>
+                
+        <script>
+            var modal = document.getElementById('popUp');
+
+            var btn = document.getElementById("add");
+
+            var span = document.getElementsByClassName("close")[0];
+
+            btn.onclick = function() {
+                modal.style.display = "block";}
+
+            span.onclick = function() {
+                modal.style.display = "none";}
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";}  }
+        </script>    
+        
+    <table overflow= "auto" overflow-y= "hidden" cellpadding= "5%" cellspacing= "0,001%" style="height:100px; overflow:auto;">
+        <tr>
+            <th>Project Name</th>
+            <th>Options</th>
+        </tr>   
+    </table>   
+            
+          <script>
+              
+            function myFunctionDel (id) {
+            var r = confirm("Are you sure you want to delete this record ?");
+                
+                if (r == true) {
+                    window.location.assign("delete.php?id=" + id);  }
+                else {
+                    window.location.assign("home.php"); }
+            }
+            
+        </script> 
+    </div>
+    
+    <div id = "contentHome">
+        
+<div id="compiler">
+
+    <div class="spinner" id='spinner'></div>
+    <div class="emscripten" id="status">Downloading...</div>
+
+    <div class="emscripten">
+      <progress value="0" max="100" id="progress" hidden=1></progress>
+    </div>
+
+    
+    <div class="emscripten_border">
+      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+    </div>
+    <textarea id="output" rows="8"></textarea>
+
+    <script type='text/javascript'>
+      var statusElement = document.getElementById('status');
+      var progressElement = document.getElementById('progress');
+      var spinnerElement = document.getElementById('spinner');
+
+      var Module = {
+        preRun: [],
+        postRun: [],
+        print: (function() {
+          var element = document.getElementById('output');
+          if (element) element.value = ''; // clear browser cache
+          return function(text) {
+            if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
+            // These replacements are necessary if you render to raw HTML
+            //text = text.replace(/&/g, "&amp;");
+            //text = text.replace(/</g, "&lt;");
+            //text = text.replace(/>/g, "&gt;");
+            //text = text.replace('\n', '<br>', 'g');
+            console.log(text);
+            if (element) {
+              element.value += text + "\n";
+              element.scrollTop = element.scrollHeight; // focus on bottom
+            }
+          };
+        })(),
+        printErr: function(text) {
+          if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
+          if (0) { // XXX disabled for safety typeof dump == 'function') {
+            dump(text + '\n'); // fast, straight to the real console
+          } else {
+            console.log(text);
+          }
+        },
+        canvas: (function() {
+          var canvas = document.getElementById('canvas');
+
+          // As a default initial behavior, pop up an alert when webgl context is lost. To make your
+          // application robust, you may want to override this behavior before shipping!
+          // See http://www.khronos.org/registry/webgl/specs/latest/1.0/#5.15.2
+          canvas.addEventListener("webglcontextlost", function(e) { alert('WebGL context lost. You will need to reload the page.'); e.preventDefault(); }, false);
+
+          return canvas;
+        })(),
+        setStatus: function(text) {
+          if (!Module.setStatus.last) Module.setStatus.last = { time: Date.now(), text: '' };
+          if (text === Module.setStatus.text) return;
+          var m = text.match(/([^(]+)\((\d+(\.\d+)?)\/(\d+)\)/);
+          var now = Date.now();
+          if (m && now - Date.now() < 30) return; // if this is a progress update, skip it if too soon
+          if (m) {
+            text = m[1];
+            progressElement.value = parseInt(m[2])*100;
+            progressElement.max = parseInt(m[4])*100;
+            progressElement.hidden = false;
+            spinnerElement.hidden = false;
+          } else {
+            progressElement.value = null;
+            progressElement.max = null;
+            progressElement.hidden = true;
+            if (!text) spinnerElement.style.display = 'none';
+          }
+          statusElement.innerHTML = text;
+        },
+        totalDependencies: 0,
+        monitorRunDependencies: function(left) {
+          this.totalDependencies = Math.max(this.totalDependencies, left);
+          Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies-left) + '/' + this.totalDependencies + ')' : 'All downloads complete.');
+        }
+      };
+      Module.setStatus('Loading contents...');
+      window.onerror = function(event) {
+        // TODO: do not warn on ok events like simulating an infinite loop or exitStatus
+        Module.setStatus('Exception thrown, see JavaScript console');
+        spinnerElement.style.display = 'none';
+        Module.setStatus = function(text) {
+          if (text) Module.printErr('[post-exception status] ' + text);
+        };
+      };
+    </script>
+      
+    <script>
+
+
+        $("a.run").click(function() {        
+            id = $(this).attr("data-id");
+            
+          var memoryInitializer = 'Users/<?php print $_SESSION["user"] ?>/'+id +'.html.mem';
+          if (typeof Module['locateFile'] === 'function') {
+            memoryInitializer = Module['locateFile'](memoryInitializer);
+          } else if (Module['memoryInitializerPrefixURL']) {
+            memoryInitializer = Module['memoryInitializerPrefixURL'] + memoryInitializer;
+          }
+            
+            var script = document.createElement('script');
+            script.src = 'Users/<?php print $_SESSION["user"] ?>/'+id +'.js';
+            document.body.appendChild(script); 
+            
+          var xhr = Module['memoryInitializerRequest'] = new XMLHttpRequest();
+          xhr.open('GET', memoryInitializer, true);
+          xhr.responseType = 'arraybuffer';
+          xhr.send(null);
+        });
+
+
+    </script>
+            </div>    
+        </div>
+    </body>
+</html>
