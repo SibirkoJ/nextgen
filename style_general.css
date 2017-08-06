@@ -36,20 +36,6 @@ a:hover, a:active {
 	text-decoration: none;
 }
 
-input[type="text"] ,input[type="password"] ,input[type="submit"] {
-    margin-bottom: 1%;
-    padding: 0.45%;
-    
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-}
-
-INPUT:hover {
-    background: rgba(0, 0, 0, 0.01);
-    color: #fff;
-}
-
 #navBar {
     border-top: 0;
     border-bottom: 3px solid;
@@ -61,34 +47,6 @@ INPUT:hover {
     width: 100%;
     display: inline;
 }
-
-#search {
-    float:left;
-    padding-top: 6px; 
-    padding-left: 6%;
-}
-
-#search input[type="text"] {
-    background: #444;
-    border: 0 none;
-    font: bold 15px Arial,Helvetica,Sans-serif;
-    color: #fff;
-    
-    width: 350px;
-    height: 40px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    
-    -webkit-transition: all 0.7s ease 0s;
-    -moz-transition: all 0.7s ease 0s;
-    -o-transition: all 0.7s ease 0s;
-    transition: all 0.7s ease 0s;
-    }
-
-#search input[type="text"]:focus {
-    width: 450px;
-    }
 
 .cf:before,
 .cf:after {
@@ -351,7 +309,6 @@ INPUT:hover {
     border-radius: 2px;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
-
 }
 
 #partFive{
@@ -400,8 +357,64 @@ INPUT:hover {
     padding-right: 15%;
 }
 
+#partRegister{
+    background-color: white; /*rgba(0, 0, 0, 0.01);*/
+    width: 72%;
+    height: 300px;
+    float: left;
+    text-align: center;
+    
+    padding-left: 15%;
+    padding-bottom: 15px;
+    padding-top: 4%;
+    padding-right: 13%;
+}
+
+form > div {
+    margin-left: 32%;
+    margin-top: 10px;
+    width: 35%;
+    float: left;
+}
+
+form > div > div {
+    width: 50%;
+    float: right;
+}
+
+form > div > label {
+    font-size: 100%;
+    float: left;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 2px 0;
+    box-sizing: border-box;
+}
+
+input[type=button] {
+    font-size: 80%;
+    width: 25%;
+    padding: 6px 2px;
+    margin: 2px 0;
+    box-sizing: border-box;
+}
+
+input[type=button]:hover {
+    color: white;
+}
+
+input[type="text"] ,input[type="password"] ,input[type="submit"] {
+    
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
 #footerWrapper {
-    height: 100px;
+    height: 110px;
     width: 100%;
     float: left;
     position: static;
@@ -426,7 +439,6 @@ INPUT:hover {
     margin-left: 45%;
 }
 
-     
 .fa {
     font-size: 40px;
     vertical-align: center;
@@ -442,7 +454,7 @@ INPUT:hover {
 }
 
 .fa-facebook {
-  color: white;
+  color: #fff;
 }
 
 .fa-twitter {
